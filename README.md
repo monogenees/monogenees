@@ -149,7 +149,7 @@
 <body>
   <!-- スプラッシュ画面：最初にテントのイラスト＋名前 -->
   <div id="splash">
-    <img class="splash-img" src="![HASAMI47](https://github.com/user-attachments/assets/615dabbc-0b08-4fc4-a7b9-fd31f6357c68)
+    <img class="splash-img" src="!https://github.com/user-attachments/assets/615dabbc-0b08-4fc4-a7b9-fd31f6357c68
 " alt="テントのイラスト">
     <div class="splash-name">小松 亮介</div>
   </div>
@@ -158,7 +158,7 @@
   <div id="main-content">
     <!-- プロフィール部分 -->
     <div class="profile">
-      <img class="profile-img" src="![IMG_8916](https://github.com/user-attachments/assets/843c3d81-0ce4-4eb5-a89b-a7d32d681d12)
+      <img class="profile-img" src="!https://github.com/user-attachments/assets/843c3d81-0ce4-4eb5-a89b-a7d32d681d12
 " alt="プロフィール写真">
       <!-- 名前・SNSを順番に表示 -->
       <div class="my-name">小松 亮介</div><br/>
