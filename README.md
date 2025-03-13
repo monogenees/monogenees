@@ -150,7 +150,7 @@
   <!-- スプラッシュ画面：最初にテントのイラスト＋名前 -->
   <div id="splash">
     <img class="splash-img" src="!https://github.com/user-attachments/assets/615dabbc-0b08-4fc4-a7b9-fd31f6357c68
-" alt="テントのイラスト">
+" alt="!https://github.com/user-attachments/assets/615dabbc-0b08-4fc4-a7b9-fd31f6357c68">
     <div class="splash-name">小松 亮介</div>
   </div>
 
@@ -159,7 +159,7 @@
     <!-- プロフィール部分 -->
     <div class="profile">
       <img class="profile-img" src="!https://github.com/user-attachments/assets/843c3d81-0ce4-4eb5-a89b-a7d32d681d12
-" alt="プロフィール写真">
+" alt="!https://github.com/user-attachments/assets/843c3d81-0ce4-4eb5-a89b-a7d32d681d12">
       <!-- 名前・SNSを順番に表示 -->
       <div class="my-name">小松 亮介</div><br/>
       <a class="line-link" href="https://line.me/ti/p/komaryou0205" target="_blank">LINE</a><br/>
