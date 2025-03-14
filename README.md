@@ -158,7 +158,7 @@
   <div id="main-content">
     <!-- プロフィール部分 -->
     <div class="profile">
-      <img class="profile-img" src="!https://github.com/user-attachments/assets/843c3d81-0ce4-4eb5-a89b-a7d32d681d12
+      <img class="profile-img" src="!https://github.com/user-attachments/assets/843c3d81-0ce4-4eb5-a89b-a7d32d681d12"
 " alt="!https://github.com/user-attachments/assets/843c3d81-0ce4-4eb5-a89b-a7d32d681d12">
       <!-- 名前・SNSを順番に表示 -->
       <div class="my-name">小松 亮介</div><br/>
