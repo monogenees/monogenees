@@ -5,7 +5,7 @@
   <title>美容師 [小松 亮介]</title>
   <style>
     body {
-      background: #F7F1E1 url('https://www.transparenttextures.com/patterns/fabric-of-squares.png'); /* 柔らかい布のような背景 */
+      background-color: #F7F1E1; /* 柔らかいベージュ背景 */
       margin: 0;
       font-family: 'Helvetica Neue', Arial, sans-serif;
       color: #333;
@@ -24,6 +24,11 @@
       z-index: 10;
       animation: fadeOut 1s ease forwards;
       animation-delay: 2s; /* 2秒後にフェードアウト開始 */
+    }
+
+    #splash.faded {
+      pointer-events: none; /* クリック不可 */
+      display: none; /* 完全に非表示 */
     }
 
     /* ロード中の演出 (.... を段階的に表示) */
@@ -166,8 +171,8 @@
   <div id="main-content">
     <div class="my-name">小松 亮介</div>
     <div>
-         <a href="https://line.me/ti/p/komaryou0205" target="_blank">LINE</a>
-         <a href="https://www.instagram.com/monogenees/" target="_blank">Instagram</a>
+      <a class="line-link" href="https://line.me/ti/p/komaryou0205" target="_blank">LINE</a><br/>
+      <a class="insta-link" href="https://www.instagram.com/monogenees/" target="_blank">Instagram</a>
     </div>
 
     <!-- 店舗情報 -->
@@ -178,5 +183,14 @@
       <a href="https://goo.gl/maps/j23xDJ9pmWqyjaKP7" target="_blank">Googleマップで見る</a>
     </div>
   </div>
+
+  <script>
+    // スプラッシュ画面のフェードアウト後、完全に非表示にする
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(() => {
+        document.getElementById("splash").classList.add("faded");
+      }, 3000); // アニメーション終了後に適用
+    });
+  </script>
 </body>
 </html>
