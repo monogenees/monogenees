@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
@@ -5,13 +6,18 @@
   <title>美容師 [小松 亮介]</title>
   <style>
     body {
-      background-color: #F7F1E1; /* 柔らかいベージュ背景 */
+      /* サンドカラー（TCテントをイメージ） */
+      background-color: #C2B280;
+      /* 布の生地の質感を再現するテクスチャ */
+      background-image: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png');
       margin: 0;
       font-family: 'Helvetica Neue', Arial, sans-serif;
       color: #333;
       position: relative;
       overflow: hidden;
     }
+    
+    /* 他のスタイルはそのまま利用可能です */
     /* スプラッシュ画面 */
     #splash {
       position: fixed;
@@ -23,15 +29,12 @@
       align-items: center;
       z-index: 10;
       animation: fadeOut 1s ease forwards;
-      animation-delay: 2s; /* 2秒後にフェードアウト開始 */
+      animation-delay: 2s;
     }
-
     #splash.faded {
-      pointer-events: none; /* クリック不可 */
-      display: none; /* 完全に非表示 */
+      pointer-events: none;
+      display: none;
     }
-
-    /* ロード中の演出 (.... を段階的に表示) */
     .loading {
       font-size: 48px;
       font-weight: bold;
@@ -48,17 +51,20 @@
     .dot:nth-child(2) { animation-delay: 2.8s; }
     .dot:nth-child(3) { animation-delay: 3.1s; }
     .dot:nth-child(4) { animation-delay: 3.4s; }
-
-    /* メインコンテンツは非表示から開始 */
+    @keyframes fadeInDots { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+    
+    /* メインコンテンツ */
     #main-content {
       position: relative;
       opacity: 0;
       animation: fadeIn 1s ease forwards;
-      animation-delay: 4.5s; /* 4.5秒後に全体がフェードイン */
+      animation-delay: 4.5s;
       padding: 20px;
       text-align: center;
     }
-
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    
     .my-name {
       font-size: 36px;
       margin-bottom: 10px;
@@ -67,7 +73,7 @@
       animation: fadeIn 1s ease forwards;
       animation-delay: 4.5s;
     }
-
+    
     .line-link {
       font-size: 20px;
       margin-top: 20px;
@@ -80,10 +86,8 @@
       animation: fadeIn 1s ease forwards;
       animation-delay: 5.5s;
     }
-    .line-link:hover {
-      border-bottom: 1px solid #333;
-    }
-
+    .line-link:hover { border-bottom: 1px solid #333; }
+    
     .insta-link {
       font-size: 20px;
       margin-top: 20px;
@@ -96,22 +100,16 @@
       animation: fadeIn 1s ease forwards;
       animation-delay: 6.5s;
     }
-    .insta-link:hover {
-      border-bottom: 1px solid #333;
-    }
-
+    .insta-link:hover { border-bottom: 1px solid #333; }
+    
     .shop-info {
       margin-top: 40px;
       opacity: 0;
       animation: fadeInUp 1s ease forwards;
-      animation-delay: 7.5s; /* 遅れて表示 */
+      animation-delay: 7.5s;
+      text-align: center;
     }
-
-    .shop-info h2 {
-      font-size: 28px;
-      margin: 10px 0;
-    }
-
+    .shop-info h2 { font-size: 28px; margin: 10px 0; }
     .shop-info a {
       font-size: 20px;
       color: #333;
@@ -119,45 +117,12 @@
       border-bottom: 1px solid transparent;
       transition: border-bottom 0.3s;
     }
-
-    .shop-info a:hover {
-      border-bottom: 1px solid #333;
-    }
-
-    /* アニメーション定義 */
-    @keyframes fadeOut {
-      from { opacity: 1; }
-      to { opacity: 0; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeInDots {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+    .shop-info a:hover { border-bottom: 1px solid #333; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
 <body>
-  <!-- スプラッシュ画面：ロード演出 -->
+  <!-- スプラッシュ画面：ロード中のドット表示 -->
   <div id="splash">
     <div class="loading">
       <span class="dot">.</span>
@@ -166,7 +131,7 @@
       <span class="dot">.</span>
     </div>
   </div>
-
+  
   <!-- メインコンテンツ -->
   <div id="main-content">
     <div class="my-name">小松 亮介</div>
@@ -174,22 +139,20 @@
       <a class="line-link" href="https://line.me/ti/p/komaryou0205" target="_blank">LINE</a><br/>
       <a class="insta-link" href="https://www.instagram.com/monogenees/" target="_blank">Instagram</a>
     </div>
-
+    
     <!-- 店舗情報 -->
     <div class="shop-info">
       <h2>レアヘアー (RareHair)</h2>
       <p>〒305-0074</p>
       <p>茨城県つくば市 高野台2丁目9-5 サザンクロス</p>
-      <a href="https://maps.app.goo.gl/5spEq5VbjKCSv9hm6?g_st=com.google.maps.preview.copy" target="_blank">Googleマップで見る</a>
+      <a href="https://goo.gl/maps/j23xDJ9pmWqyjaKP7" target="_blank">Googleマップで見る</a>
     </div>
   </div>
-
+  
   <script>
-    // スプラッシュ画面のフェードアウト後、完全に非表示にする
-    document.addEventListener("DOMContentLoaded", function() {
-      setTimeout(() => {
-        document.getElementById("splash").classList.add("faded");
-      }, 3000); // アニメーション終了後に適用
+    // スプラッシュ画面のフェードアウトが完了したら、#splashに'faded'クラスを追加
+    document.getElementById('splash').addEventListener('animationend', function() {
+      this.classList.add('faded');
     });
   </script>
 </body>
